@@ -53,12 +53,19 @@ These instructions will get you a copy of the project up and running on your loc
 
 ### Prerequisites
 
-You need to setup in your environment Python 3.7 and download the following libraries mariadb,mongodb and a Bigquery account
+You need to setup in your environment Python 3.7 and download the following libraries mariadb,mongodb and google-cloud-bigquery.
 
 ```
 pip install mariadb
-pip install pymysql
+pip install pymongo
 pip install google-cloud-bigquery
+
+```
+Also if you prefer we provided a requirements.txt for all libraries just type in your terminal:
+
+```
+pip install -r requirements.txt
+
 ```
 
 ### Installing
@@ -70,6 +77,8 @@ When you are done with the earlier steps you just have to run in your terminal:
 python createdb.py
 
 ```
+The SQL creation data for the MariaDB is on the file bankaya.sql
+The jsons for the collections for the MongoDB (NoSQL) are customers_data.json,items_data.json and items_bought_data.json
 You will see messages if you did it well or error messages saying what is wrong. Please always check your connections strings configured properly.
 
 ## Authors
