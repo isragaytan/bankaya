@@ -10,9 +10,13 @@ This is a script built in Python 3.7 for ETL testing purposes. The main idea is 
 2. Create a NoSQL Database with the following structure:
 
 ```
-[{"title":"USB","price":10.2},
+items_data=[{"title":"USB","price":10.2},
  {"title":"Mouse","price":12.23},
  {"title":"Monitor","price":199.99}]
+ 
+ customers_data=[{"firstname":"Bob","lastname":"Adams","phone_number":1234567,"curp":"GAFb893355","rfc":"SAMPLERFC","address":"Wellington Boulevard 42 Massachusets"},
+ {"firstname":"Amy","lastname":"Smith","phone_number":1234567,"curp":"GAFA893356","rfc":"SAMPLERFC","address":"Townsend Avenue 234, Chicago Illinois"},
+ {"firstname":"Rob","lastname":"Bennet","phone_number":1234567,"curp":"GAFR893357","rfc":"SAMPLERFC","address":"Dr Vertiz 1410 Mexico DF"}]
  
 ```
 
