@@ -1,3 +1,3 @@
-[{"title":"USB","price":"Adams"},
- {"title":"Mouse","price":"Smith"},
- {"title":"Monitor","price":"Bennet"}]
+[{"title":"USB","price":10.2},
+ {"title":"Mouse","price":12.23},
+ {"title":"Monitor","price":199.99}]

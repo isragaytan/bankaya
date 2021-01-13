@@ -1,3 +1,3 @@
-[{"firstname":"Bob","lastname":"Adams"},
- {"firstname":"Amy","lastname":"Smith"},
- {"firstname":"Rob","lastname":"Bennet"}]
+[{"firstname":"Bob","lastname":"Adams","phone_number":1234567,"curp":"GAFb893355","rfc":"SAMPLERFC","address":"Wellington Boulevard 42 Massachusets"},
+ {"firstname":"Amy","lastname":"Smith","phone_number":1234567,"curp":"GAFA893356","rfc":"SAMPLERFC","address":"Townsend Avenue 234, Chicago Illinois"},
+ {"firstname":"Rob","lastname":"Bennet","phone_number":1234567,"curp":"GAFR893357","rfc":"SAMPLERFC","address":"Dr Vertiz 1410 Mexico DF"}]
