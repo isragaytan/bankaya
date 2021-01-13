@@ -3,9 +3,9 @@
 This is a script built in Python 3.7 for ETL testing purposes. The main idea is to create code to automate the following process:
 1. Create a SQL Database with the following tables:
 
-CUSTOMER
-ITEMS
-ITEMS_BOUGHT
+- CUSTOMER This table will contain a primary key as well as the customers first and last names, phone number, curp, rfc and address information.
+- ITEMS This table will contain a primary key, item name and item price.
+- ITEMS_BOUGHT This table will contain order number, price, comments and primary keys in the ITEM and CUSTOMER tables.
 
 2. Create a NoSQL Database with the following structure:
 
@@ -16,10 +16,8 @@ ITEMS_BOUGHT
  
 ```
 
-3. Extract information from both origins to any DWH
+3. Extract information from both origins to any DWH (BigQuery)
 
-MARIADB database dynamically , and then create a NoSQL database (MONGODB). After those database are
-created , put NoSQL data in to MARIADB and then move to a DWH.All creation scripts (bankaya.sql) for MARIADB and items_data.json and customers_data.json are also provided
 
 ## Getting Started
 
@@ -49,7 +47,7 @@ def __init__(self):
 ```
 
 3. Google Service Account
-If you don’t have a service account,[follow this guide to create on](https://cloud.google.com/iam/docs/creating-managing-service-accounts), and then proceed to download the JSON file to your local machine to interact with BigQuery.
+If you don’t have a service account,[follow this guide to create one](https://cloud.google.com/iam/docs/creating-managing-service-accounts), and then proceed to download the JSON file to your local machine to interact with BigQuery.
 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
 
