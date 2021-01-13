@@ -15,11 +15,14 @@ CREATE TABLE IF NOT EXISTS ITEMS(
     price decimal NOT NULL
 );
 CREATE TABLE IF NOT EXISTS ITEMS_BOUGHT(
-    order_number INT PRIMARY KEY AUTO_INCREMENT,
+    id_number INT PRIMARY KEY AUTO_INCREMENT,
+    order_number varchar(20) NOT NULL,
     date_order date NOT NULL,
     price decimal NOT NULL,
+    comments text,
     id_items INT,
     id_customers INT,
+    INDEX id_order_number (id_number,order_number),
     FOREIGN KEY (id_items) REFERENCES ITEMS(id) ON DELETE SET NULL,
     FOREIGN KEY (id_customers) REFERENCES CUSTOMER(id) ON DELETE SET NULL
 );
