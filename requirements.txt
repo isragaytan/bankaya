@@ -1,0 +1,3 @@
+mariadb
+pymongo
+google-cloud-bigquery
