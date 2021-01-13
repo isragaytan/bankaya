@@ -23,8 +23,6 @@ pip install pymysql
 You just have to install MariaDB anb MongoDB downlodable from their proper sites.
 
 
-```
-
 ## Authors
 
 * **Israel Gaytan** - *Initial work* - [Isra](https://github.com/isragaytan)
@@ -35,6 +33,5 @@ This project has no licensed
 
 ## Acknowledgments
 
-* Hat tip to anyone whose code was used
-* Inspiration
-* etc
+* Thanks to bankaya for this funny test.
+
