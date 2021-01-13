@@ -40,7 +40,7 @@ def execute_json(filename,collection):
 execute_sql (r'C:\Users\esteb\OneDrive\Documentos\isra\code\bankaya\bankaya.sql')
 execute_json(r'C:\Users\esteb\OneDrive\Documentos\isra\code\bankaya\customers_data.json',"customers_data")
 execute_json(r'C:\Users\esteb\OneDrive\Documentos\isra\code\bankaya\items_data.json',"items_data")
-execute_json(r'C:\Users\esteb\OneDrive\Documentos\isra\code\bankaya\items_data.json',"items_bought_data")
+execute_json(r'C:\Users\esteb\OneDrive\Documentos\isra\code\bankaya\items_bought_data.json',"items_bought_data")
 
 #Export from MONGO TO MARIADB
 
@@ -72,6 +72,19 @@ def export_items():
     print("Succesfully Exported items")   
     cur.commit() 
 
+#Export item_bougths
+def export_item_bougths():
+    db_ins = MongoDB().db['items_bougth_data']
+    cust_data = db_ins.find()
+    cur = MariaDB("BANKAYA")
+    for data in  cust_data:
+        print(data["title"])
+        try: 
+            cur.execute("INSERT INTO ITEMS (item,price) VALUES (?, ?)", (data["title"],data["price"]))
+        except mariadb.Error as e: 
+            print(f"MariaDB Error: {e}")
+    print("Succesfully Exported items")   
+    cur.commit() 
 #Function calls
 export_customers()
 export_items()
