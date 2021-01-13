@@ -25,7 +25,7 @@ items_data=[{"title":"USB","price":10.2},
 
 ## Getting Started
 
-For getting started you have to install or have access to a MARIADB instance locally or remotely or a MONGODB as well.For access to a Datawarehouse in this case we will use Google Bigquery.It is highly recomended to get some credentials and access to Bigquery to run properly the script.To run in your local machine you must have to change the connections strings in the following classes:
+For getting started you have to install or have access to a [MARIADB](https://mariadb.org/download/) instance locally or remotely or a [MONGODB](https://www.mongodb.com/try/download/community) as well.For access to a Datawarehouse in this case we will use Google [BigQuery](https://cloud.google.com/bigquery?hl=en).It is highly recomended to get some credentials and access to Bigquery to run properly the script.To run in your local machine you must have to change the connections strings in the following classes:
 
 1. connmaria.py 
 
