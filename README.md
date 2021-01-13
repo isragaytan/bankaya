@@ -1,27 +1,78 @@
 # Bankaya ETL pipeline
 
-This is a script built in Python 3.7 for ETL testing purposes. The main idea is create 1 MARIADB database dynamically , and then create a NoSQL database (MONGODB). After those database are
+This is a script built in Python 3.7 for ETL testing purposes. The main idea is to create code to automate the following process:
+1. Create a SQL Database with the following tables:
+
+CUSTOMER
+ITEMS
+ITEMS_BOUGHT
+
+2. Create a NoSQL Database with the following structure:
+
+```
+[{"title":"USB","price":10.2},
+ {"title":"Mouse","price":12.23},
+ {"title":"Monitor","price":199.99}]
+ 
+```
+
+3. Extract information from both origins to any DWH
+
+MARIADB database dynamically , and then create a NoSQL database (MONGODB). After those database are
 created , put NoSQL data in to MARIADB and then move to a DWH.All creation scripts (bankaya.sql) for MARIADB and items_data.json and customers_data.json are also provided
 
 ## Getting Started
 
-For getting started you have to install or have access to a MARIADB instance locally or remotely or a MONGODB as well.To run in your local machine you must have to change the connections strings some proper changes
-in 2 classes. connmaria.py and connmongo.py
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+For getting started you have to install or have access to a MARIADB instance locally or remotely or a MONGODB as well.For access to a Datawarehouse in this case we will use Google Bigquery.It is highly recomended to get some credentials and access to Bigquery to run properly the script.To run in your local machine you must have to change the connections strings in the following classes:
+
+1. connmaria.py 
+
+```
+def __init__(self,db=None):
+        #NOT RECOMENDAABLE THIS LINE ITS BETTER TO KEEP IN AN A OS ENVIRONMENT FOR HIDE CREDENTIALS OR IN VAULT
+        #self._conn = mariadb.connect(os.environ["CREDENTIALS"])
+        #JUST FOR DEMO PURPOSES DONT PUT THIS LINE IN PRODUCTION!
+        self._conn = mariadb.connect(user="xxx",password="xxx",host="xxx",database=db)
+        self._cursor = self._conn.cursor()
+ 
+```
+
+
+
+2. connmongo.py
+
+```
+def __init__(self):
+        _client = MongoClient('localhost', 27017)
+        self.db = _client['bankaya']
+ 
+```
+
+3. Google Service Account
+If you don’t have a service account,[follow this guide to create on](https://cloud.google.com/iam/docs/creating-managing-service-accounts), and then proceed to download the JSON file to your local machine to interact with BigQuery.
+
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
 
 ### Prerequisites
 
-You need to setup in your environment Python 3.7, mariadb and pymysql.
+You need to setup in your environment Python 3.7 and download the following libraries mariadb,mongodb and a Bigquery account
 
 ```
 pip install mariadb
 pip install pymysql
+pip install google-cloud-bigquery
 ```
 
 ### Installing
 
-You just have to install MariaDB anb MongoDB downlodable from their proper sites.
+When you are done with the earlier steps you just have to run in your terminal:
 
+
+```
+python createdb.py
+
+```
+You will see messages if you did it well or error messages saying what is wrong. Please always check your connections strings configured properly.
 
 ## Authors
 
