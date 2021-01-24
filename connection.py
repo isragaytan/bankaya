@@ -7,7 +7,7 @@ class MariaDB:
     """Class to connect to Mariadb"""
     def __init__(self):
         #NOT RECOMENDAABLE THIS LINE. ITS BETTER TO KEEP IN AN A OS ENVIRONMENT FOR HIDE CREDENTIALS OR IN VAULT
-        #self._conn = mariadb.connect(os.environ["CREDENTIALS"])
+        #self._conn = mariadb.connect(os.environ["   CREDENTIALS"])
         #JUST FOR DEMO PURPOSES DONT PUT THIS LINE IN PRODUCTION
         self._conn = mariadb.connect(user="root",password="13Shaila1@",host="localhost")
         self._cursor = self._conn.cursor()
