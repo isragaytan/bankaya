@@ -1,0 +1,17 @@
+git diff --staged HEAD
+veo las diferencias que hay en stagin y en remoto
+
+git diff -- README.MD
+
+//COMPARING BETWEEN COMMITS
+git log --oneline 
+
+//all changes that happen betwen the reference and the last commit
+git diff (idref1) HEAD
+
+//REPOSITORY HEAD...LAST COMMIT LOCAL
+git diff HEAD HEAD^
+
+//COMPARISON BETWEEN TWO BRANCHES
+git diff master origin/master
+
