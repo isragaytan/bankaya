@@ -51,3 +51,6 @@ if you want, you can also add this to use VSCODE for merge !
     tool = vscode
 [mergetool "vscode"]
     cmd = code --wait $MERGED
+
+//view changes on fast forward commits and see what was MERGED
+git log --oneline --graph --decorate
