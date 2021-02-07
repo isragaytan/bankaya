@@ -95,5 +95,5 @@ This project has no licensed. Thinking to become MIT licence.
 
 ## Acknowledgments
 
-* Thanks to bankaya for accept me on this wonderful work
+* Thanks to bankaya for accept me on this wonderful work and my girlfriend Shai for support me. 
 
