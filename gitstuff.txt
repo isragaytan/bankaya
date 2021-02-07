@@ -36,3 +36,18 @@ git branch -d branch
 
 //DIRECTLY CREATE BRANCH AND Change
 git checkout -b development1
+
+
+IF YOU ARE WORKING WITH VISUAL STUDIO
+AND GIT LENS YOU HAVE TO ADD THIS LINE
+IN THE ~/.gitconfig file
+[diff]
+    tool = vscode
+[difftool "vscode"]
+    cmd = code --wait --diff $LOCAL $REMOTE
+if you want, you can also add this to use VSCODE for merge !
+
+[merge]
+    tool = vscode
+[mergetool "vscode"]
+    cmd = code --wait $MERGED
