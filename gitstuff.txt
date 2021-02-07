@@ -15,3 +15,24 @@ git diff HEAD HEAD^
 //COMPARISON BETWEEN TWO BRANCHES
 git diff master origin/master
 
+//BRANCHES
+//listing branches
+git branch -a
+
+//create a branch
+git branch development
+
+//Change to a branche
+git checkout development
+
+//SEE HEADS BETWEEN BRANCHES
+git log --oneline --decorate
+
+//RENAME A BRANCHE
+git branch -m development dev
+
+//DELETE A BRANCHE
+git branch -d branch
+
+//DIRECTLY CREATE BRANCH AND Change
+git checkout -b development1
