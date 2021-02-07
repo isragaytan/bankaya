@@ -91,9 +91,10 @@ You will see messages if you did it well or error messages saying what is wrong.
 
 ## License
 
-This project has no licensed. Thinking to become MIT licence. Researching also on this type of branch
+This project has no licensed. Thinking to become MIT licence. Researching also on this type of branch. Editing Licence.
 
 ## Acknowledgments
 
 * Thanks to bankaya for accept me on this wonderful work and my girlfriend Shai for support me. 
+
 
