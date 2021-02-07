@@ -91,7 +91,7 @@ You will see messages if you did it well or error messages saying what is wrong.
 
 ## License
 
-This project has no licensed
+This project has no licensed. Thinking to become MIT licence.
 
 ## Acknowledgments
 
