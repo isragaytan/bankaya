@@ -54,3 +54,8 @@ if you want, you can also add this to use VSCODE for merge !
 
 //view changes on fast forward commits and see what was MERGED
 git log --oneline --graph --decorate
+
+//REMOVE BRANCHES
+git branch -d "branch"
+
+//TESTING BRANCHES AGAIN
