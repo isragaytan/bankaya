@@ -59,5 +59,8 @@ git log --oneline --graph --decorate
 git branch -d "branch"
 
 //TESTING BRANCHES AGAIN
+<<<<<<< HEAD
 this is another change for make conflict
+=======
 merging conflicts
+>>>>>>> realwork
