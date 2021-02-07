@@ -113,7 +113,7 @@ def export_item_bougths():
     #cur.commit() 
 
 
-#Main function
+#Main function ...do this forever
 if __name__=="__main__":
     export_customers()
     export_items()
