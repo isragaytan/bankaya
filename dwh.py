@@ -5,6 +5,8 @@ credentials = service_account.Credentials.from_service_account_file(r'C:\Users\e
 
 project_id = "bankaya"
 
+#Change to SNOWFLAKE
+
 client = bigquery.Client(credentials=credentials,project=project_id)
 
 query_job = client.query("""SELECT * FROM bankaya.data_migrated.test_mysql LIMIT 1000;""")
